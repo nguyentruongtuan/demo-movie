@@ -3,7 +3,7 @@ version: "3.1"
 services:
   
   api:
-    build: ./api
+    build: ./demo-movie-api
     restart: always
     ports:
       - 8000:8000
@@ -12,14 +12,14 @@ services:
   
 
   app:
-    build: ./app
+    build: ./demo-movie-react
     restart: always
     ports:
       - 3000:3000
 
   migration:
     build:
-      context: ./api
+      context: ./demo-movie-api
       dockerfile: Dockerfile.migration
     depends_on:
       db:
@@ -28,7 +28,7 @@ services:
   
   seed:
     build:
-      context: ./api
+      context: ./demo-movie-api
       dockerfile: Dockerfile.migration
     depends_on:
       migration:
