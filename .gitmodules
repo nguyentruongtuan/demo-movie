@@ -1,0 +1,6 @@
+[submodule "demo-movie-api"]
+	path = demo-movie-api
+	url = git@github.com:nguyentruongtuan/demo-movie-api.git
+[submodule "demo-movie-react"]
+	path = demo-movie-react
+	url = git@github.com:nguyentruongtuan/demo-movie-react.git
